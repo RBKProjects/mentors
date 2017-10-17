@@ -1,7 +1,14 @@
 .container{
-    max-width: 800px;
+    max-width: 1200px;
 }
 
 .btn-primary{
     
+}
+
+.footer{
+    background-color:#151515;
+    color: #585858;
+    height: 40px;
+    line-height: 40px;
 }

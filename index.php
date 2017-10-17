@@ -12,7 +12,35 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+               <div class="navbar-header">
+                    <a href="http://rbk.org" class="navbar-brand">LOGO</a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mydropdown">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                    <div class="collapse navbar-collapse" id="mydropdown">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">The Program</a></li>
+                        <li><a href="#">Curriculum</a></li>
+                        <li><a href="#">Volunteers</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Hire Our Grads</a></li>
+                        <li><a href="#">Alumni Outcomes</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                    <button class="btn btn-primary navbar-btn navbar-right">Apply</button>
+
+               </div>
+           </div>
+        </nav>
+
+
+    <div class="container" style="padding-top:60px;">
         <h1>RBK Mentor Registration</h1>
     </div>
     <div class="container">
@@ -103,6 +131,18 @@
             </div>
         </form>
     </div>
+
+    <div class="contianer-fluid footer">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8">
+                RBK 2016 © All Rights Reserved
+            </div>
+        </div>
+        </div>
+    </div>
+
+
 
     <!-- Libraries-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
