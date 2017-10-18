@@ -1,25 +1,30 @@
-.container .panel{
-    max-width: 1199px;
-}
+/*
+colors
+    primary-color:  #B32082               // main color
+    secondary-color: #990066              // used for hover
+    dark-color:  #70024B                  // used for border
+*/
+
+
 input[type="radio"] {
-  /* remove standard background appearance */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  /* create custom radiobutton appearance */
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  padding: 2px;
-  /* background-color only for content */
-  background-clip: content-box;
-  border: 1px solid #bbbbbb;
-  background-color: #e7e6e7;
-  border-radius: 50%;
+    /* remove standard background appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    padding: 2px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 1px solid #bbbbbb;
+    background-color: #e7e6e7;
+    border-radius: 50%;
 }
 
 input[type="radio"]:checked {
-  background-color: #B32082;
+    background-color: #B32082;
 }
 
 .form-control:focus {
@@ -94,4 +99,26 @@ fieldset[disabled] .btn-sample.active {
 }
 .panel-title{
     color: #B32082;
+}
+
+a{
+    color: #B32082;
+}
+a:hover{
+    color: #990066;
+    text-decoration: none;
+}
+
+
+@media (min-width: 1199px) {
+    .container{
+        max-width: 1199px;
+    }
+}
+@media (min-width: 800px) {
+
+}
+.fieldRequired{
+    color: red;
+    font-family: monospace;
 }
