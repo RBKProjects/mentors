@@ -173,6 +173,8 @@
                     $('#submitButton').removeClass('form-control');
                     $('#applyButton').addClass('navbar-right');
                     $('#applyButton').removeClass('btn-block');
+                    $('#submitButton').removeClass('btn-block');
+
             }
         }
         $(document).ready(function() {

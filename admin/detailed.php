@@ -38,29 +38,41 @@
                </div>
            </div>
         </nav>
-
+<?php
+    $id         = $_REQUEST["id"];
+    $first_name = $_REQUEST["first_name"];
+    $last_name  = .$_REQUEST["last_name"];
+    $email      = $_REQUEST["email"];
+    $skype      = $_REQUEST["skype"];
+    $title      = $_REQUEST["title"];
+    $location   = $_REQUEST["location"];
+    $company    = $_REQUEST["company"];
+    $many_years = $_REQUEST["many_years"];
+?>
 
     <div class="container" style="padding-top:70px;">
         <h1> List of Mentors</h1>
         <?php
-        $conn = mysqli_connect(SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-        // Check connection
-        if (mysqli_connect_error()) {
-            die("Database connection failed: " . mysqli_connect_error());
-        }
+            $conn = mysqli_connect(SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+            // Check connection
+            if (mysqli_connect_error()) {
+                die("Database connection failed: " . mysqli_connect_error());
+            }
 
-        // support Arabic
-        mysqli_set_charset($conn,"utf8");
+            $id = $_GET["id"];
+            // support Arabic
+            mysqli_set_charset($conn,"utf8");
 
-        // create the sql
-        $sql = "SELECT * FROM tbl_mentors";
-        $result = mysqli_query($conn, $sql);
+            // create the sql
+            $sql = "SELECT * FROM tbl_mentors WHERE id=".$id;
+            $result = mysqli_query($conn, $sql);
         ?>
   <table class="table table-hover">
     <thead>
       <tr>
         <th>ID</th>
-        <th>Full Name</th>
+        <th>First Name</th>
+        <th>Last Name</th>
         <th>Email</th>
         <th>Skype</th>
         <th>Title</th>
@@ -74,31 +86,11 @@
     </thead>
     <tbody>
         <?php
-        if(mysqli_num_rows($result) > 0){
-            while ($row = mysqli_fetch_assoc($result)){
-                $inter = "Yes";
-                if($row["interested"] == 0){
-                    $inter = "No";
-                }
-                echo '<tr>
-                        <td>'.$row["id"].'</td>
-                        <td><a href="detailed.php?id='.$row["id"].'">'.$row["first_name"].' '.$row["last_name"].'</a></td>
-                        <td>'.$row["email"].'</td>
-                        <td>'.$row["skype"].'</td>
-                        <td>'.$row["title"].'</td>
-                        <td>'.$row["location"].'</td>
-                        <td>'.$row["company"].'</td>
-                        <td>'.$row["many_years"].' Years' .'</td>
 
-                        <td>'.$inter.'</td>
-                        <td>'.$row["tech_non_tech"].'</td>
-                    </tr>';
-            }
-        }
+
+
         ?>
-    </tbody>
-  </table>
-<?php mysqli_close($conn);?>
+
 
     </div>
 
@@ -106,7 +98,7 @@
         <p class="text-center">RBK 2016 © All Rights Reserved</p>
     </div>
 
-
+<?php mysqli_close($conn);?>
 
     <!-- Libraries-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
