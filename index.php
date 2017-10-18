@@ -46,9 +46,17 @@
     <div class="container">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h1 class="panel-title text-center" style=" paddin-bottom:10px">RBK Mentor Registration</h1>
+                <h1 class="panel-title text-center" style=" paddin-bottom:10px">RBK Mentor Registration Form</h1>
             </div>
-
+            <div class="container" style="padding-right:20px; padding-top:20px">
+                <p class="lead">
+                    We are seeking <strong>technical and non-technical mentors</strong>, both remote and non-remote, to coach and support students. We look for mentors who are enthusiastic, positive and open.
+                </p>
+                <p class="lead">
+                    Commitment: One hour per week to mentor one student via Skype/Google Hangouts or at RBK campus if you prefer. You and your mentee will coordinate suitable times to talk. RBK promotes <strong>English</strong> as the main communication language between mentors and mentees but feel free to speak Arabic, Chinese, Klingon, ...
+                </p>
+                <span class="fieldRequired"> * Required</span>
+            </div>
             <form class="form-horizontal" method="GET" action="send.php" style="padding: 20px;">
                 <div class="form-group">
                     <label for="firstName" class="col-sm-2 control-label">First Name<span class="fieldRequired"> *</span></label>
