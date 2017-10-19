@@ -13,6 +13,41 @@
 </head>
 
 <body>
+    <?php
+        $conn = mysqli_connect(SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+        // Check connection
+        if (mysqli_connect_error()) {
+            die("Database connection failed: " . mysqli_connect_error());
+        }
+
+        $id = $_GET["id"];
+        // support Arabic
+        mysqli_set_charset($conn,"utf8");
+
+        // create the sql
+        $sql = "SELECT * FROM tbl_mentors WHERE id=".$id;
+        $result = mysqli_query($conn, $sql);
+        if(mysqli_num_rows($result) > 0){
+            while ($row = mysqli_fetch_assoc($result)){
+                $inter = "Yes";
+                if($row["interested"] == 0){
+                    $inter = "No";
+                }
+                $id = $row["id"];
+                $first_name = $row["first_name"];
+                $last_name = $row["last_name"];
+                $email = $row["email"];
+                $skype = $row["skype"];
+                $title = $row["title"];
+                $location = $row["location"];
+                $company = $row["company"];
+                $many_years = $row["many_years"];
+                $interested = $row['tech_non_tech'];
+                $registration_date= $row['registration_date'];
+            }
+        }
+        mysqli_close($conn);
+    ?>
 
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -38,59 +73,25 @@
                </div>
            </div>
         </nav>
-<?php
-    $id         = $_REQUEST["id"];
-    $first_name = $_REQUEST["first_name"];
-    $last_name  = .$_REQUEST["last_name"];
-    $email      = $_REQUEST["email"];
-    $skype      = $_REQUEST["skype"];
-    $title      = $_REQUEST["title"];
-    $location   = $_REQUEST["location"];
-    $company    = $_REQUEST["company"];
-    $many_years = $_REQUEST["many_years"];
-?>
 
     <div class="container" style="padding-top:70px;">
-        <h1> List of Mentors</h1>
-        <?php
-            $conn = mysqli_connect(SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-            // Check connection
-            if (mysqli_connect_error()) {
-                die("Database connection failed: " . mysqli_connect_error());
-            }
-
-            $id = $_GET["id"];
-            // support Arabic
-            mysqli_set_charset($conn,"utf8");
-
-            // create the sql
-            $sql = "SELECT * FROM tbl_mentors WHERE id=".$id;
-            $result = mysqli_query($conn, $sql);
-        ?>
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th>Skype</th>
-        <th>Title</th>
-        <th>Location</th>
-        <th>Company</th>
-        <th>Experience</th>
-        <th>Interested</th>
-        <th>Interests</th>
-
-      </tr>
-    </thead>
-    <tbody>
-        <?php
-
-
-
-        ?>
-
+        <h1> Detailed Info:
+            <span style="color:#B32082;">
+                <?php echo $first_name . ' '. $last_name;?>
+            </span>
+        </h1>
+        <p class="lead"><strong>Application Date: </strong><?php echo $registration_date; ?></p>
+        <P class="lead"><strong>ID: </strong><?php echo $id; ?> </p>
+        <p class="lead"><strong>First Name: </strong><?php echo $first_name; ?> </p>
+        <p class="lead"><strong>Last Name: </strong><?php echo $last_name; ?> </p>
+        <p class="lead"><strong>Email: </strong><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
+        <p class="lead"><strong>Skype: </strong><?php echo $skype; ?></p>
+        <p class="lead"><strong>Title: </strong><?php echo $title;; ?></p>
+        <p class="lead"><strong>Location: </strong><?php echo $location; ?></p>
+        <p class="lead"><strong>Company: </strong><?php echo $company; ?></p>
+        <p class="lead"><strong>Experience: </strong><?php echo $many_years.' Years'; ?></p>
+        <p class="lead"><strong>Interested: </strong><?php echo $inter; ?></p>
+        <p class="lead"><strong>Interests: </strong><?php echo $interested; ?></p>
 
     </div>
 
@@ -98,33 +99,9 @@
         <p class="text-center">RBK 2016 © All Rights Reserved</p>
     </div>
 
-<?php mysqli_close($conn);?>
-
     <!-- Libraries-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-
-    <script>
-        function checkWidth(init) {
-            if ($(window).width() < 768) {
-                $('#submitButton').addClass('btn-block');
-                $('#applyButton').removeClass('navbar-right');
-                $('#applyButton').addClass('btn-block');
-            } else {
-                if (!init)
-                    $('#submitButton').removeClass('form-control');
-                    $('#applyButton').addClass('navbar-right');
-                    $('#applyButton').removeClass('btn-block');
-            }
-        }
-        $(document).ready(function() {
-            checkWidth(true);
-            $(window).resize(function() {
-                checkWidth(false);
-            });
-        });
-    </script>
 </body>
-
 </html>

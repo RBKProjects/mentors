@@ -77,7 +77,7 @@
     // create the sql
     $sql = "INSERT INTO tbl_mentors".
             "(first_name, last_name, email, skype, title, location, company, many_years, interested, tech_non_tech)".
-            "VALUES ('"
+            " VALUES ('"
             .$first_name."', '"
             .$last_name."','"
             .$email."','"
@@ -105,6 +105,12 @@
         ?>
         <div class="alert alert-danger">
             <strong>Sorry!</strong> Something went wrong! Try Again!!.
+            <p>
+
+                <?php
+                    echo "ERROR: ". mysqli_error($conn);
+                ?>
+            </p>
         </div>
         <?php
         //echo "Error: " . $sql . "<br>" . mysqli_error($conn);

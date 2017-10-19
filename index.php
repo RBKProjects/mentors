@@ -52,7 +52,7 @@
                 <p class="lead">
                     We are seeking <strong>technical and non-technical mentors</strong>, both remote and non-remote, to coach and support students. We look for mentors who are enthusiastic, positive and open.
                 </p>
-                <p class="lead">
+                <p class="lead" style="margin-right:10px;">
                     Commitment: One hour per week to mentor one student via Skype/Google Hangouts or at RBK campus if you prefer. You and your mentee will coordinate suitable times to talk. RBK promotes <strong>English</strong> as the main communication language between mentors and mentees but feel free to speak Arabic, Chinese, Klingon, ...
                 </p>
                 <span class="fieldRequired"> * Required</span>

@@ -4,8 +4,6 @@ colors
     secondary-color: #990066              // used for hover
     dark-color:  #70024B                  // used for border
 */
-
-
 input[type="radio"] {
     /* remove standard background appearance */
     -webkit-appearance: none;

@@ -41,7 +41,7 @@
 
 
     <div class="container" style="padding-top:70px;">
-        <h1> List of Mentors</h1>
+        <h1 class="text-center"> List of Mentors</h1>
         <?php
         $conn = mysqli_connect(SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
         // Check connection
