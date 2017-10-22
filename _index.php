@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                <div class="navbar-header">
@@ -40,90 +41,68 @@
 
 
     <div class="container" style="padding-top:70px;">
-    </div>
 
-    <div class="container" style="max-width:760px;">
-        <div class="panel panel-default" >
+    </div>
+    <div class="container">
+        <div class="panel panel-default">
             <div class="panel-heading">
-                <h1 class="panel-title text-center" style=" paddin-bottom:10px">
-                    RBK Mentor Registration Form
-                </h1>
+                <h1 class="panel-title text-center" style=" paddin-bottom:10px">RBK Mentor Registration Form</h1>
             </div>
-            <div class="container" style="padding:20px 20px 0px 20px;">
-                <p style="max-width:700px; padding-right:20px;">
-                    We are seeking technical and non-technical mentors, both remote and non-remote, to coach and support students. We look for mentors who are enthusiastic, positive and open.
+            <div class="container" style="padding-right:20px; padding-top:20px">
+                <p class="lead">
+                    We are seeking <strong>technical and non-technical mentors</strong>, both remote and non-remote, to coach and support students. We look for mentors who are enthusiastic, positive and open.
                 </p>
-                <p style="margin-right:10px; max-width:700px;">
-                    Commitment: One hour per week to mentor one student via Skype/Google Hangouts or at RBK campus if you prefer. You and your mentee will coordinate suitable times to talk. RBK promotes English as the main communication language between mentors and mentees but feel free to speak Arabic, Chinese, Klingon, ...
+                <p class="lead" style="margin-right:10px;">
+                    Commitment: One hour per week to mentor one student via Skype/Google Hangouts or at RBK campus if you prefer. You and your mentee will coordinate suitable times to talk. RBK promotes <strong>English</strong> as the main communication language between mentors and mentees but feel free to speak Arabic, Chinese, Klingon, ...
                 </p>
-                <br>
-                <span class="fieldRequired">* Required</span>
+                <span class="fieldRequired"> * Required</span>
             </div>
-            <form class="form-horizontal" method="GET" action="send.php" style="padding: 0px 20px 20px 20px; max-width:345px; margin-left: 20px;">
+            <form class="form-horizontal" method="GET" action="send.php" style="padding: 20px;">
                 <div class="form-group">
-                    <label for="firstName" class="control-label">
-                        First Name
-                        <span class="fieldRequired"> *</span>
-                    </label>
-                    <div class="">
+                    <label for="firstName" class="col-sm-2 control-label">First Name<span class="fieldRequired"> *</span></label>
+                    <div class="col-sm-10">
                         <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="lastName" class="control-label">
-                        Last Name
-                        <span class="fieldRequired"> *</span>
-                    </label>
-                    <div class="">
+                    <label for="lastName" class="col-sm-2 control-label">Last Name<span class="fieldRequired"> *</span></label>
+                    <div class="col-sm-10">
                         <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="email" class="control-label">
-                        Email<span class="fieldRequired"> *</span>
-                    </label>
-                    <div class="">
+                    <label for="email" class="col-sm-2 control-label">Email<span class="fieldRequired"> *</span></label>
+                    <div class="col-sm-10">
                         <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="skype" class="control-label">
-                        Skype ID
-                    </label>
-                    <div class="">
+                    <label for="skype" class="col-sm-2 control-label">Skype ID</label>
+                    <div class="col-sm-10">
                         <input type="text" class="form-control" id="skype" name="skype" placeholder="Skype ID">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="location" class="control-label">
-                        Location (Country)
-                        <span class="fieldRequired"> *</span>
-                    </label>
-                    <div class="">
+                    <label for="location" class="col-sm-2 control-label">Location (Country)<span class="fieldRequired"> *</span></label>
+                    <div class="col-sm-10">
                         <input type="text" class="form-control" id="location" name="location" placeholder="Location" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="title" class="control-label">
-                        Title/Profession
-                        <span class="fieldRequired"> *</span>
-                    </label>
-                    <div class="">
+                    <label for="title" class="col-sm-2 control-label">Title/Profession <span class="fieldRequired"> *</span></label>
+                    <div class="col-sm-10">
                         <input type="text" class="form-control" id="title" name="title" placeholder="Title/Profession" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="company" class="control-label">
-                        Institution / Company
-                        <span class="fieldRequired"> *</span>
-                    </label>
-                    <div class="">
+                    <label for="company" class="col-sm-2 control-label">Institution / Company<span class="fieldRequired"> *</span></label>
+                    <div class="col-sm-10">
                         <input type="text" class="form-control" id="company" name="company" placeholder="Institution / Organization / Company" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label">How many years of experience you have?<span class="fieldRequired"> *</span></label>
+                    <label class="col-sm-2 control-label">How many years of experience you have?<span class="fieldRequired"> *</span></label>
                     <div style=margin-left:15px;>
                         <div class="radio">
                             <label>
@@ -146,41 +125,26 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label">
-                        Interested in mentoring more than one student?
-                        <span class="fieldRequired"> *</span>
-                    </label>
-                    <div style=margin-left:15px;>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" id="yes" name="interested" value="true" required>
-                                Yes
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" id="no" name="interested" value="false" required>
-                                No
-                            </label>
-                        </div>
-                    </div>
+                    <label class="col-sm-2 control-label">Interested in mentoring more than one student?<span class="fieldRequired"> *</span></label>
+                        <label class="radio-inline">
+                            <input type="radio" id="yes" name="interested" value="true" required>
+                            Yes
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="no" name="interested" value="false" required>
+                            No
+                        </label>
                 </div>
                 <div class="form-group">
-                    <label for="company" class="control-label">
-                        Your interests (Technical and Non-Technical)
-                        <span class="fieldRequired"> *</span>
-                    </label>
-                    <div class="read">
+                    <label for="company" class="col-sm-2 control-label">Your interests (Technical and Non-Technical)<span class="fieldRequired"> *</span> </label>
+                    <div class="col-sm-10">
                         <textarea class="form-control" name="techNonTech" rows="3" required></textarea>
                     </div>
                 </div>
-                <div class="form-group">
-                    <img src="_images/mentor.jpg" class="img img-responsive" alt="">
-                </div>
 
                 <div class="form-group">
-                    <div>
-                        <button id="submitButton" type="submit" class="btn btn-sample">Submit</button>
+                    <div class="col-sm-offset-2 col-sm-10">
+                            <button id="submitButton" type="submit" class="btn btn-sample">Submit</button>
                     </div>
                 </div>
             </form>
@@ -210,6 +174,7 @@
                     $('#applyButton').addClass('navbar-right');
                     $('#applyButton').removeClass('btn-block');
                     $('#submitButton').removeClass('btn-block');
+
             }
         }
         $(document).ready(function() {

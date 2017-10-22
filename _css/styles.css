@@ -4,6 +4,10 @@ colors
     secondary-color: #990066              // used for hover
     dark-color:  #70024B                  // used for border
 */
+
+.main{
+    max-width: 700px;
+}
 input[type="radio"] {
     /* remove standard background appearance */
     -webkit-appearance: none;
@@ -108,14 +112,14 @@ a:hover{
 }
 
 
-@media (min-width: 1199px) {
+/*@media (min-width: 1199px) {
     .container{
         max-width: 1199px;
     }
 }
 @media (min-width: 800px) {
 
-}
+}*/
 .fieldRequired{
     color: red;
     font-family: monospace;
