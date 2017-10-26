@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="http://rbk.org/wp-content/uploads/2016/03/fav.png" />
 </head>
 
-<body>
+<body style="font-size:18px;">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                <div class="navbar-header">
@@ -39,27 +39,43 @@
         </nav>
 
 
-    <div class="container" style="padding-top:70px;">
+
+        <div class="container" style="padding-top:50px;">
+        </div>
+    <div
+        class="container-fluid"
+        style="
+            height: 350px;
+            background-image: url('https://lh4.googleusercontent.com/R-w517HNSHFh-pCDNF2syef1VHuDjQerNlsCohCisXwFUvo1Gcr8FqfYcruqCoqoTNg0n7GKFg');
+            background-size: cover;
+            background-width: 100%;
+            background-position: center;
+            ">
     </div>
 
-    <div class="container" style="max-width:760px;">
+    <div
+        class="container"
+        style="
+            max-width:760px;
+            margin-top: -80px;">
+
         <div class="panel panel-default" >
-            <div class="panel-heading">
-                <h1 class="panel-title text-center" style=" paddin-bottom:10px">
+            <div style="padding:0px 20px;">
+                <h1 style=" paddin-bottom:10px">
                     RBK Mentor Registration Form
                 </h1>
             </div>
             <div class="container" style="padding:20px 20px 0px 20px;">
-                <p style="max-width:700px; padding-right:20px;">
+                <p class="lead" style="max-width:700px; padding-right:20px;">
                     We are seeking technical and non-technical mentors, both remote and non-remote, to coach and support students. We look for mentors who are enthusiastic, positive and open.
                 </p>
-                <p style="margin-right:10px; max-width:700px;">
+                <p class="lead" style="margin-right:10px; max-width:700px;">
                     Commitment: One hour per week to mentor one student via Skype/Google Hangouts or at RBK campus if you prefer. You and your mentee will coordinate suitable times to talk. RBK promotes English as the main communication language between mentors and mentees but feel free to speak Arabic, Chinese, Klingon, ...
                 </p>
                 <br>
                 <span class="fieldRequired">* Required</span>
             </div>
-            <form class="form-horizontal" method="GET" action="send.php" style="padding: 0px 20px 20px 20px; max-width:345px; margin-left: 20px;">
+            <form class="form-horizontal" method="GET" action="send.php" style="padding: 0px 20px 20px 20px; max-width:445px; margin-left: 20px;  margin-right: 20px;">
                 <div class="form-group">
                     <label for="firstName" class="control-label">
                         First Name
@@ -174,12 +190,17 @@
                         <textarea class="form-control" name="techNonTech" rows="3" required></textarea>
                     </div>
                 </div>
-                <div class="form-group">
-                    <img src="_images/mentor.jpg" class="img img-responsive" alt="">
+                <div class="container">
+                    <img
+                        src="_images/mentor.jpg"
+                        class="img-responsive"
+                        >
                 </div>
 
+                <br />
                 <div class="form-group">
                     <div>
+                        <!-- <button id="clearButton" type="reset" class="btn btn-sample">Clear</button> -->
                         <button id="submitButton" type="submit" class="btn btn-sample">Submit</button>
                     </div>
                 </div>

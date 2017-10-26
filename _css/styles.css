@@ -5,8 +5,16 @@ colors
     dark-color:  #70024B                  // used for border
 */
 
+
+.cover_image{
+    height: 350px;
+    background-image: url('https://lh4.googleusercontent.com/R-w517HNSHFh-pCDNF2syef1VHuDjQerNlsCohCisXwFUvo1Gcr8FqfYcruqCoqoTNg0n7GKFg');
+    background-size: cover;
+    background-width: 100%;
+    background-position: center;
+}
 .main{
-    max-width: 700px;
+    /*max-width: 700px;*/
 }
 input[type="radio"] {
     /* remove standard background appearance */
